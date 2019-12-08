@@ -155,10 +155,10 @@ if __name__ == "__main__":
     reproduction_num = 0.20
     mortality_num = .99
 
-    initial_healthy = 47
-    initial_vaccinated = 45
+    initial_healthy = 3
+    initial_vaccinated = 5
 
-    initial_infected = 9
+    initial_infected = 2
 
     virus = Virus(virus_name, reproduction_num, mortality_num)
     num = initial_healthy + initial_vaccinated + initial_infected
