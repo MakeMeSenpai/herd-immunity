@@ -11,6 +11,7 @@ class FileWriter:
         results_file.write(f"Simulation for virus: {virus.name}\n")
         results_file.write(f"Reproduction Number: {virus.reproduction_num}, Mortality Number: {virus.mortality_num}\n")
         results_file.write(f"Population Size: {population_size}\n")
+        results_file.write("\n")
         results_file.write(f"Initial Vaccinated: {initial_vaccinated}\n")
         results_file.write(f"Initial Healthy: {initial_healthy}\n")
         results_file.write(f"Initial Infected: {initial_infected}\n")
