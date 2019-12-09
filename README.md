@@ -1,6 +1,6 @@
 
 # Final Project: Herd Immunity Simulation
-potato text ~test
+
 ## Description
 We're going to create a basic simulation of herd immunity by modeling how a virus moves through a population where some (but not all) of a population is vaccinated against this virus.
 
