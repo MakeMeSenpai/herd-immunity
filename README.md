@@ -1,6 +1,6 @@
 
 # Final Project: Herd Immunity Simulation
-
+potato text ~test
 ## Description
 We're going to create a basic simulation of herd immunity by modeling how a virus moves through a population where some (but not all) of a population is vaccinated against this virus.
 
@@ -48,7 +48,7 @@ The program consists of 4 classes: `Person`, `Virus`, `Simulation`, and `FileWri
 
 ## Project Submission
 
-This project will be done via pair programming with randomly assinged pairs. In order successfully pass this project you will need to fill out the corresponding project rubric. 
+This project will be done via pair programming with randomly assinged pairs. In order successfully pass this project you will need to fill out the corresponding project rubric.
 One partner will submit the project github repo link on trinket by the deadline and indicate who their partner was as well. []
 
 ### Stretch Challenges
