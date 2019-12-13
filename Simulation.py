@@ -4,12 +4,12 @@ from Virus import Virus
 from FileWriter import FileWriter
 
 class Simulation:
-  
+
     def __init__(self, initial_vaccinated, initial_infected, initial_healthy, virus, resultsfilename):
         '''Set up the initial simulation values'''
 
-        self.virus = virus 
-        self.initial_infected = initial_infected 
+        self.virus = virus
+        self.initial_infected = initial_infected
         self.initial_healthy = initial_healthy
         self.initial_vaccinated = initial_vaccinated
 
@@ -25,39 +25,39 @@ class Simulation:
 
 
     def create_population(self):
-        '''Creates the population (a list of Person objects) consisting of initial infected people, initial healthy non-vaccinated people, and 
+        '''Creates the population (a list of Person objects) consisting of initial infected people, initial healthy non-vaccinated people, and
         initial healthy vaccinated people. Adds them to the population list'''
 
-        for _ in range(self.initial_infected):
-        	person = Person(False, virus)
-        	self.population.append(person)
+        for i in range(self.initial_infected):
+        	each_person = Person(False, virus)
+        	self.population.append(each_person)
 
-        for _ in range(self.initial_healthy):
-            person = Person(False, None)
-            self.population.append(person)
+        for i in range(self.initial_healthy):
+            each_person = Person(False, None)
+            self.population.append(each_person)
 
-        for _ in range(self.initial_vaccinated):
-            person = Person(True, None)
-            self.population.append(person)
-        	
+        for i in range(self.initial_vaccinated):
+            each_person = Person(True, None)
+            self.population.append(each_person)
+
     def print_population(self):
         '''Prints out every person in the population and their current attributes'''
         num = 0
-        for person in self.population:
-            if person.infection != None:
+        for each_person in self.population:
+            if each_person.infection != None:
                 infection = True
             else:
                 infection = False
-            print(f"id: {str(num)} alive: {str(person.is_alive)} infected: {str(infection)} vacinated: {str(person.is_vaccinated)}.")
+            print(f"id: {str(num)} alive: {str(each_person.is_alive)} infected: {str(infection)} vacinated: {str(each_person.is_vaccinated)}.")
             num += 1
 
     def get_infected(self):
         '''Gets all the infected people from the population and returns them as a list'''
         infected = []
-        for person in self.population:
-            if person.infection != None:
-                infected.append(person)
-                return infected     
+        for each_person in self.population:
+            if each_person.infection != None:
+                infected.append(each_person)
+                return infected
 
 
     def simulation_should_continue(self):
@@ -67,23 +67,23 @@ class Simulation:
         If there are no more infected people left and everyone is either vaccinated or dead return False
         In all other cases return True'''
         #TODO: finish this method
-        for person in self.population:
-            if person.is_alive == False or person.is_vaccinated == True:
+        for each_person in self.population:
+            if each_person.is_alive == False or each_person.is_vaccinated == True:
                 return False
             else:
                 return True
-        
+
 
     def run(self):
         ''' This method should run the simulation until all requirements for ending
         the simulation are met.
         '''
-        
+
         self.create_population()
         random.shuffle(self.population)
 
         self.print_population()
-        
+
         time_step_counter = 0
 
         self.file_writer.init_file(self.virus, self.population_size, self.initial_vaccinated, self.initial_healthy, self.initial_infected)
@@ -103,13 +103,13 @@ class Simulation:
         self.file_writer.write_results(time_step_counter, self.total_dead, self.total_vaccinated)
 
     def determine_survival(self, infected):
-        for person in infected:
-            if person.did_survive_infection() == False:
+        for each_person in infected:
+            if each_person.did_survive_infection() == False:
                 self.total_dead += 1
             else:
-                person.is_vaccinated = True
+                each_person.is_vaccinated = True
                 self.total_vaccinated += 1
-            
+
 
 
     def time_step(self, infected):
@@ -147,7 +147,7 @@ class Simulation:
                 return random_person
 
 
-        
+
 if __name__ == "__main__":
 
     #Set up the initial simulations values

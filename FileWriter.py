@@ -17,7 +17,7 @@ class FileWriter:
         results_file.write(f"Initial Infected: {initial_infected}\n")
 
         results_file.close()
-    
+
     def write_results(self, time_step_counter, total_dead, total_vaccinated):
         '''Write the results of the simulation to the file'''
         results_file = open(self.results_file_name, "a")
