@@ -1,5 +1,15 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
+import csv
+
+
+# with open('iris.csv', 'w', newline='') as file:
+#     writer = csv.writer(file)
+#     writer.writerow(["SN", "Name", "Contribution"])
+#     writer.writerow([1, "Linus Torvalds", "Linux Kernel"])
+#     writer.writerow([2, "Tim Berners-Lee", "World Wide Web"])
+#     writer.writerow([3, "Guido van Rossum", "Python Programming"])
 
 iris = pd.read_csv('iris.csv', names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
 print(iris.head())
