@@ -2,7 +2,9 @@
 # Final Project: Herd Immunity Simulation
 
 ## Description
-We're going to create a basic simulation of herd immunity by modeling how a virus moves through a population where some (but not all) of a population is vaccinated against this virus.
+We're going to create a basic simulation of herd immunity by modeling how a virus moves through a population where some (but 
+not all) of a population is vaccinated against this virus. run using ```$python3 simulation.py``` change population within 
+this file
 
 ## Learning Outcomes
 By completing this project, you should be able to…
