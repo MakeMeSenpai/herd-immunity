@@ -48,7 +48,7 @@ more-itertools==7.2.0
 mpmath==1.1.0
 mss==4.0.3
 networkx==2.4
-numpy==1.17.3
+numpy==1.22.0
 numpydoc==0.9.1
 packaging==19.1
 palettable==3.3.0
